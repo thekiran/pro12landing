@@ -1,0 +1,256 @@
+/* Fonts */
+@font-face {
+    font-family: DMSerifText;
+    src:url("../fonts/DMSerifText-Regular.ttf");
+}
+@font-face {
+    font-family: Sofia;
+    src:url("../fonts/Sofia\ Pro\ Regular.ttf");
+}
+@font-face {
+    font-family: MacklinDisplay;
+    src:url("../fonts/FontsFree-Net-MacklinDisplay-Italic.ttf");
+}
+/* Fonts end */
+
+body{
+    /* font-size: 55px; */
+    background: #000;
+    font-family: DMSerifText;
+}
+.container{
+    display: block;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Navigation styles start */
+
+nav{
+    background: rgb(255, 255, 255);
+    padding: 1em 0;
+}
+nav .nav-content{
+    display: flex;
+    margin: 1em 0;
+}
+nav .logo{
+    font-size: 2.5em;
+    font-family: DMSerifText;
+    /* background: rgb(255, 255, 255); */
+    /* color: rgba(0, 0, 0, 0.75); */
+    display: block;
+    margin-right: auto;
+}
+nav .h1{}
+
+nav .nav-list{
+    display: flex;
+    font-size: 1.25em;
+    font-family: Sofia;
+    margin: 10px 3em 20px 0;
+    font-weight: 600;
+}
+nav .nav-list li{
+    display: block;
+    margin: 0 1.5em;
+}
+nav .nav-list a{
+    color: rgba(0, 0, 0, 0.5);
+    /* color: rgb(255, 255, 255); */
+    text-decoration: none;
+}
+
+nav a.sub-btn{
+    display: block;
+    font-size: 1.25em;
+    margin: 10px 3em;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Sofia;
+    text-decoration: none;
+    /* color: rgb(255, 255, 255); */
+}
+
+a.underline{
+    position: relative;
+}
+a.underline::after{
+    content: '';
+    display: block; 
+    position: absolute;
+    top: 100%;
+    left: -6%;
+    height: 1px;
+    width: 110%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform 500ms ease-in-out;
+}
+
+a.underline:hover::after{
+    transform: translateX(-60px) scale(0);
+}
+
+/* Navigation Stlyes End */
+
+/* Header styles start */
+header{
+    background: red;
+    height: 700px;
+    z-index: 2;
+}
+
+/* Header styles end */
+
+/* Artist info start */
+.artist{
+    /* margin-top: -5em; */
+    background: rgb(255, 255, 255);
+}
+.artist .artist-content{
+
+}
+.artist .artist-title{
+    /* background: red; */
+    /* margin: 1em 0; */
+    font-size: 4em;
+    font-weight: 600;
+    font-family: MacklinDisplay;
+    text-align: center;
+    position: relative;
+    color: rgba(0,0,0,0.75);
+    padding: 2.5em 0;
+}
+
+.artist .artist-title::before,
+.artist .artist-title::after{
+    content: '';
+    position: absolute;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 2px;
+}
+
+.artist .artist-title::before{
+    top: 0px;
+    left: 50%;
+    /* z-index: 5; */
+    /* transform: translate(-50%,50%); */
+}
+.artist .artist-title::after{
+    bottom: 0px;
+    left: 50%;
+    /* z-index: 5; */
+    /* transform: translate(-50%,50%); */
+}
+
+.artist .artist-info{
+    /* background: red; */
+    margin: 1em 0;
+    text-align: center;
+    font-size: 1.75em;
+    line-height: 1.5;
+    font-weight: 600;
+    color: rgba(0,0,0,0.5);
+}
+.artist .artist-showcase{
+    /* background: rgb(161, 78, 78); */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.artist .artist-showcase .sub-btn{
+    /* background: red; */
+    height: max-content;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Sofia;
+}
+.artist .artist-showcase .sub-btn::after,
+.artist .artist-showcase .sub-btn::before{
+    margin: 10px 0;
+}
+
+.artist .artist-showcase img{
+    height: 550px;
+    width: 380px;  
+    /* object-fit: cover;   */
+}
+
+/* Artist info end */
+
+/* Artwork styles start */
+.artwork{
+    background: rgb(255, 255, 255);
+    padding: 1em 0;
+}
+.artwork .artwork-content{}
+.artwork .artwork-title{
+    text-align: center;
+    font-size: 3em;
+    padding: 3em 0;
+    /* background: rgb(255, 255, 255); */
+    position: relative;
+}
+.artwork .artwork-title::after{
+    content: '';
+    position: absolute;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 2px;
+    bottom: 0px;
+    left: 50%;
+}
+.artwork .artwork-showcase{
+    /* background: #000; */
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+.artwork .artwork-showcase img{
+    height: 400px;
+    width: 350px;
+}
+.artwork .artwork-showcase img:nth-of-type(2){
+    /* height: 400px; */
+    width: 600px;
+    /* margin: 0 8em; */
+}
+.artwork .artwork-btn{
+    display: block;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 600;
+    /* background: red; */
+    margin: 0 auto;
+    width: max-content;
+    position: relative;
+    text-decoration: none;
+    padding: 10px 0;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Sofia;
+
+}
+.artwork .artwork-btn::after{
+    content: '';
+    display: block; 
+    position: absolute;
+    top: 97%;
+    left: -6%;
+    height: 1px;
+    width: 110%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform 500ms ease-in-out;
+}
+.artwork .artwork-btn:hover::after{
+    transform: translateX(-60px) scale(0);
+}
+
+/* Artwork styles end */
+
+.sp{
+    height: 500px;
+    background: #000;
+}
+
